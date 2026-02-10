@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>treino condições</title>
+</head>
+<body>
+
+    <input type="number" id="idade">
+    <input type="button" value="Verificar" onclick="calcular()"></button>
+    <div id="res"></div>
+
+    <script>
+
+    function calcular () { 
+        var idade = document.getElementById ('idade')
+        var res = document.getElementById ('res')
+
+        var idade=Number (idade.value) 
+
+        res.innerHTML = `Voce tem ${idade} `
+
+        if (idade < 18) { 
+        res.innerHTML += ` é menor de idade` }else{
+         res.innerHTML += ` é maior de idade` }
+    }
+        
+    </script>
+    
+</body>
+</html>

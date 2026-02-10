@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>treino condições</title>
+</head>
+<body>
+
+    <input type="number" id="idade"> 
+    
+    <!-- cria um campo onde o usuario digita a idade  -->
+
+    <!-- TYPE NUMBER - FORÇA NÚMEROS E O ID "IDADE " PERMITE QUE O JS ENCONTRE ESSE CAMPO -->
+
+
+    <input type="button" value="Verificar" onclick="calcular()"></button>
+    <!-- cria um botão //
+        value é o texto do botão , seu nome // 
+        onclick "calcular" chama a função calcular quando clicar -->
+
+    <div id="res"></div>
+
+    <!-- UMA DIV VAZIA // VAI MOSTRAR O RESULTADO NA TELA -->
+
+
+
+    <script>
+
+    function calcular () { 
+        //CRIA UMA FUNÇÃO CHAMADA CALCULAR // TUDO DENTRO DELA SO RODA QUANDO FOR CLICADO 
+        var idade = document.getElementById ('idade')
+        //PROCURA NO HTML O ELEMENTO COM ID"IDADE" // GUARDA ESSE ELEMENTO NA VARIAVEL IDADE
+        var res = document.getElementById ('res')
+        //PROCURA A DIV ONDE VAMOS MOSTRAR O RESULTADO // GUARDA ELA NA VARIAVEL RES 
+
+        var idade=Number (idade.value) 
+        //IDADE.VALUE PEGA O QUE O USUARIO DIGITOU ISSO VEM COMO TEXTO E NUMBER () CONVERTE PARA NUMERO "18" - 18
+
+        res.innerHTML = `Voce tem ${idade} `
+        //ESCREVE TEXTO DENTRO DA DIV // ${IDADE} INSERE O VALOR DA VARIAVEL NO TEXTO // DETALHE IMPORTANTE O RES.INNERHTML = COM ESSE SINAL (=) APAGA QUALQUER TEXTO ANTERIOR DA DIV  
+
+        if (idade < 18) { 
+        res.innerHTML += ` é menor de idade`
+        // ESSE SINAL += JUNTA MEU TEXTO ANTERIOR COM é menor de idade se eu usasse apenas = apareceria apenas "é menor de idade"
+    
+        }else{
+         res.innerHTML += ` é maior de idade` }
+    }
+        
+    </script>
+    
+</body>
+</html>
